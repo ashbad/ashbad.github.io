@@ -8,6 +8,22 @@
 		<meta name="description" content="">
 		<meta http-equiv="X-UA-Compatible" content="IE=Edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0",shrink-to-fit=yes">
+		<style>
+                @-webkit-viewport { width: device-width; }
+                @-moz-viewport { width: device-width; }
+                @-ms-viewport { width: device-width; }
+                @-o-viewport { width: device-width; }
+                @viewport { width: device-width; }
+                </style>
+    <script>
+    // Important for windows phone 8
+    if (navigator.userAgent.match(/IEMobile\/10\.0/))
+    {
+        var msViewportStyle = document.createElement("style");
+        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"));
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle);
+    }
+</script>											
 		
 		<link rel="stylesheet" href="css/animate.min.css">
 		<link rel="stylesheet" href="css/bootstrap.min.css">
